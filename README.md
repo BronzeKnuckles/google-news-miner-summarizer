@@ -1,7 +1,7 @@
 # google-news-miner-summarizer
 
 
-Mines Google news links with user criteria:
+### Mines Google news links with user criteria:
  - google_news.period = '7d'  # News from last 7 days
  - google_news.max_results = 10  # number of responses across a keyword
  - google_news.country = 'United States'  # News from a specific country 

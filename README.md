@@ -21,8 +21,8 @@ Runs each link through newspaper.Article():
  - Saves to newsMined.txt
   
 Exception handling if news article retrieval fails:
-    -   prints "ERROR <link>"
-    -   saves error newsMined.txt
+  - prints "ERROR <link>"
+  - saves error newsMined.txt
 
 ## How to run:
  - Git Clone 

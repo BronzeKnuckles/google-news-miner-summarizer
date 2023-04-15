@@ -1,7 +1,7 @@
 # google-news-miner-summarizer
 
 
-### Mines Google news links with user criteria:
+### Mines Google news links with user criteria then prints and stores the news title, keywords and summary.
 ```
 google_news.period = '7d'  # News from last 7 days
 google_news.max_results = 10  # number of responses across a keyword

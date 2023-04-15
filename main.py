@@ -2,7 +2,10 @@ from newspaper import Article
 from gnews import GNews
 
 
-google_news = GNews()
+news_for = "Scotia Bank"
+
+google_news = GNews(news_for)
+
 
 google_news.period = "7d"  # News from last 7 days
 google_news.max_results = 10  # number of responses across a keyword

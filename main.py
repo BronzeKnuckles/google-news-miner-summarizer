@@ -29,14 +29,14 @@ with open("newsMined.txt", "w") as f:
             article.parse()
             article.nlp()
             print(
-                f"\nArticle Title: \t{article.title}\nArticle Keywords: \t{article.keywords}\nArticle Summary: \n{article.summary}\n\n\n"
+                f"\n{i+1}. Article Title: \t{article.title}\nArticle Keywords: \t{article.keywords}\nArticle Summary: \n{article.summary}\n\n\n"
             )
             f.write(
-                f"\nArticle Title: \t{article.title}\nArticle Keywords: \t{article.keywords}\nArticle Summary: \n{article.summary}\n\n\n"
+                f"\n{i+1}. Article Title: \t{article.title}\nArticle Keywords: \t{article.keywords}\nArticle Summary: \n{article.summary}\n\n\n"
             )
         except:
-            print(f"ERROR!!!! for link: {link}\n")
-            f.write(f"ERROR!!!! for link: {link}\n")
+            print(f"ERROR!!!! for link no. {i+1}: {link}\n")
+            f.write(f"ERROR!!!! for link no. {i+1}: {link}\n")
 
 
 print("Task Done")

@@ -1,14 +1,8 @@
 from newspaper import Article
 from gnews import GNews
-import streamlit as st
 
-news_for = ""
-num = 0
 
-# news_for = "Scotia Bank"
-news_for = st.text_input(label="Search news for ?")
-# num = st.number_input(label="Input no. of articles")
-num = st.slider(label="Input no. of Articles", min_value=1, max_value=10)
+news_for = "Scotia Bank"
 
 
 def main():
@@ -27,36 +21,25 @@ def main():
     json_resp = google_news.get_news(news_for)
 
     # with open("newsMined.txt", "w") as f:
-    for i in range(int(num)):
+    for i in range(10):
         link = json_resp[i]["url"]
         try:
             article = Article(link)
             article.download()
             article.parse()
             article.nlp()
-            st.text_area(
-                label=f"Article no. {i+1}",
-                height=350,
-                value=f"Article Title: \t{article.title}\n\nArticle Keywords: \t{article.keywords}\n\nArticle Summary: \n{article.summary}",
-            )
+
             print(
                 f"\n{i+1}. Article Title: \t{article.title}\nArticle Keywords: \t{article.keywords}\nArticle Summary: \n{article.summary}\n\n\n"
             )
             # f.write(f"\n{i+1}. Article Title: \t{article.title}\nArticle Keywords: \t{article.keywords}\nArticle Summary: \n{article.summary}\n\n\n")
         except:
             print(f"ERROR!!!! for link no. {i+1}: {link}\n")
-            st.text_area(
-                label=f"Error Fetching Article {i+1}",
-                height=350,
-                value=f"LINK: {link}",
-            )
 
             # f.write(f"ERROR!!!! for link no. {i+1}: {link}\n")
 
     print("Task Done")
 
 
-if news_for != "" and num != 0:
+if news_for != "":
     main()
-    news_for = ""
-    num = 0

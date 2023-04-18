@@ -3,13 +3,14 @@ from gnews import GNews
 
 
 news_for = "Scotia Bank"
+num_of_results = 10
 
 
 def main():
     google_news = GNews(news_for)
 
     google_news.period = "7d"  # News from last 7 days
-    google_news.max_results = 10  # number of responses across a keyword
+    google_news.max_results = num_of_results  # number of responses across a keyword
     # google_news.country = "United States"  # News from a specific country
     google_news.language = "english"  # News in a specific language
     # google_news.exclude_websites = []
@@ -21,7 +22,7 @@ def main():
     json_resp = google_news.get_news(news_for)
 
     # with open("newsMined.txt", "w") as f:
-    for i in range(10):
+    for i in range(num_of_results):
         link = json_resp[i]["url"]
         try:
             article = Article(link)

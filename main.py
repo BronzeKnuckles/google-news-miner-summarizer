@@ -17,8 +17,6 @@ def main():
     # google_news.start_date = (2020, 1, 1)  # Search from 1st Jan 2020
     # google_news.end_date = (2020, 3, 1)  # Search until 1st March 2020
 
-    # result = google_news.get_news('"Citadel-securities"')
-
     json_resp = google_news.get_news(news_for)
 
     with open("newsMined.txt", "w") as f:

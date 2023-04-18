@@ -21,23 +21,24 @@ def main():
 
     json_resp = google_news.get_news(news_for)
 
-    # with open("newsMined.txt", "w") as f:
-    for i in range(num_of_results):
-        link = json_resp[i]["url"]
-        try:
-            article = Article(link)
-            article.download()
-            article.parse()
-            article.nlp()
+    with open("newsMined.txt", "w") as f:
+        for i in range(num_of_results):
+            link = json_resp[i]["url"]
+            try:
+                article = Article(link)
+                article.download()
+                article.parse()
+                article.nlp()
 
-            print(
-                f"\n{i+1}. Article Title: \t{article.title}\nArticle Keywords: \t{article.keywords}\nArticle Summary: \n{article.summary}\n\n\n"
-            )
-            # f.write(f"\n{i+1}. Article Title: \t{article.title}\nArticle Keywords: \t{article.keywords}\nArticle Summary: \n{article.summary}\n\n\n")
-        except:
-            print(f"ERROR!!!! for link no. {i+1}: {link}\n")
-
-            # f.write(f"ERROR!!!! for link no. {i+1}: {link}\n")
+                print(
+                    f"\n{i+1}. Article Title: \t{article.title}\nArticle Keywords: \t{article.keywords}\nArticle Summary: \n{article.summary}\n\n\n"
+                )
+                f.write(
+                    f"\n{i+1}. Article Title: \t{article.title}\nArticle Keywords: \t{article.keywords}\nArticle Summary: \n{article.summary}\n\n\n"
+                )
+            except:
+                print(f"ERROR!!!! for link no. {i+1}: {link}\n")
+                f.write(f"ERROR!!!! for link no. {i+1}: {link}\n")
 
     print("Task Done")
 

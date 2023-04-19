@@ -5,6 +5,7 @@
 ```
 google_news.period = '7d'  # News from last 7 days
 google_news.max_results = 10  # number of responses across a keyword
+ - edit num_of_results
 google_news.country = 'United States'  # News from a specific country 
 google_news.language = 'english'  # News in a specific language
 google_news.exclude_websites = ['yahoo.com', 'cnn.com']  # Exclude news from #specific website i.e Yahoo.com and CNN.com

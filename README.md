@@ -33,3 +33,6 @@ google_news.end_date = (2020, 3, 1) # Search until 1st March 2020
  - python main.py 
 
 
+#### Ignore streamlitapp.py
+
+

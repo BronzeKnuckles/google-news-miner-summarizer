@@ -1,6 +1,6 @@
-from newspaper import Article
 from gnews import GNews
 import streamlit as st
+
 
 news_for = ""
 num = 0
@@ -30,7 +30,7 @@ def main():
     for i in range(int(num)):
         link = json_resp[i]["url"]
         try:
-            article = Article(link)
+            article = google_news.get_full_article(link)
             article.download()
             article.parse()
             article.nlp()

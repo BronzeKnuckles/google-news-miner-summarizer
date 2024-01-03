@@ -1,5 +1,7 @@
 # google-news-miner-summarizer
 
+---
+*Project Discontinued*
 
 ### Mines Google news links with user criteria then prints and stores the news title, keywords and summary.
 ```

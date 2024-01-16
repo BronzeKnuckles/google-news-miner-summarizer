@@ -1,7 +1,7 @@
 # google-news-miner-summarizer
 
 ---
-*Project Discontinued*
+Forked from [ranahaani/GNews](https://github.com/ranahaani/GNews)
 
 ### Mines Google news links with user criteria then prints and stores the news title, keywords and summary.
 ```
@@ -22,8 +22,8 @@ google_news.end_date = (2020, 3, 1) # Search until 1st March 2020
     - Keywords
     - Title 
     - Summary
- 1. Saves to newsMined.txt
- 2. Print: "Task Done" when complete
+ 4. Saves to newsMined.txt
+ 5. Print: "Task Done" when complete
 
 ---
 *Exception handling if news article retrieval fails:*
@@ -33,9 +33,14 @@ google_news.end_date = (2020, 3, 1) # Search until 1st March 2020
 ## **How to run:**
  - Git Clone 
  - pip install -r requirements.txt
- - python main.py 
+ - python main.py (Note : company name, number of results and other parameters are in main.py)
 
 
-#### Ignore streamlitapp.py
+## Output in [newsMined.txt](https://github.com/BronzeKnuckles/google-news-miner-summarizer/blob/master/newsMined.txt)
+
+
+
+
+#### Ignore streamlitapp.py -> made streamlit app
 
 
